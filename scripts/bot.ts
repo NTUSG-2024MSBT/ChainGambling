@@ -54,7 +54,7 @@ bot.start((ctx: any) => {
       inline_keyboard: [
         [
           {
-            text: "Open Mini Web App 🚀",
+            text: "Open WEB3.0 Casino 💰",
             web_app: {
               url: `${LOGIN_URL}/?telegramAuthToken=${encodedTelegramAuthToken}`,
             },
@@ -65,7 +65,7 @@ bot.start((ctx: any) => {
   };
 
   // Send a welcome message with the inline keyboard
-  ctx.reply("Welcome to XYZ Mini Web App", keyboard);
+  ctx.reply("Welcome to Chain Gambling💰", keyboard);
 });
 
 // Launch the bot

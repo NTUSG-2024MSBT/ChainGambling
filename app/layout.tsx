@@ -6,6 +6,7 @@ import {
   EthereumWalletConnectors,
   SolanaWalletConnectors,
 } from "../lib/dynamic";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,6 +35,8 @@ export default function RootLayout({
           walletConnectors: [EthereumWalletConnectors, SolanaWalletConnectors],
         }}
       >
+        {/* Speed Insights */}
+        <SpeedInsights />
         <body className={inter.className}>{children}</body>
       </DynamicContextProvider>
     </html>

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && ts-node scripts/bot.ts",
+    "build": "next buildnpm",
     "start": "next start",
     "lint": "next lint"
   },

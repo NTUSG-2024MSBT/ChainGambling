@@ -5,11 +5,8 @@ import {
   DynamicContextProvider,
   EthereumWalletConnectors,
   SolanaWalletConnectors,
-  useDynamicContext,
 } from "../lib/dynamic";
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import { useRouter } from 'next/router';
-import { useEffect } from 'react';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,16 +21,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const { user } = useDynamicContext();
-  const router = useRouter();
-
-  useEffect(() => {
-    if (user) {
-      // 如果用户已连接钱包，跳转到赚取 NFT 的页面
-      router.push('/earn-nft');
-    }
-  }, [user]);
-  
   if (!dynamicEnvId) {
     const errMsg =
       "Please add your Dynamic Environment to this project's .env file";

@@ -1,3 +1,5 @@
+"use client";
+
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -33,7 +35,7 @@ export default function RootLayout({
       router.push('/earn-nft');
     }
   }, [user]);
-  
+
   if (!dynamicEnvId) {
     const errMsg =
       "Please add your Dynamic Environment to this project's .env file";
